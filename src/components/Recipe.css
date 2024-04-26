@@ -1,0 +1,63 @@
+.card img {
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  text-align: left;
+  color: rgb(25, 31, 101);
+  background-color: rgb(228, 228, 228);
+  box-shadow: 5px 5px 5px rgb(190, 190, 190);
+}
+
+.content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  float: right;
+  text-align: left;
+  /* width: 170px;
+  height: 100%; */
+}
+
+.title {
+  line-height: 25px;
+}
+
+a h3 {
+  color: rgb(187, 187, 187);
+}
+
+a h3:hover {
+  color: rgb(206, 58, 58);
+}
+
+.recipe-button {
+  bottom: 0;
+  background-color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-size: 0.8em;
+  border: none;
+  padding: 8px 30px;
+  border-radius: 30px;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #979797;
+}
+
+.recipe-button:hover {
+  background-color: rgb(45, 110, 4);
+  border: none;
+  color: #ffffff;
+}
+
+.recipe-button:focus {
+  border: none;
+}
+
+h3 {
+  margin: 0;
+}

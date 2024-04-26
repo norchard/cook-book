@@ -1,0 +1,160 @@
+h2 {
+  float: left;
+  display: inline;
+  margin: 0;
+  line-height: 30px;
+  color: rgb(78, 78, 78);
+  vertical-align: baseline;
+}
+
+h3 {
+  float: left;
+  line-height: 33px;
+}
+
+#search-bar {
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 5px 5px rgb(190, 190, 190);
+  border-radius: 30px 30px 30px 30px;
+  width: 90vw;
+}
+
+#search-module {
+  float: left;
+}
+
+#search-box {
+  background-color: rgb(231, 231, 231);
+  border: none;
+  color: black;
+  width: 30vw;
+  padding: 18px 0px 18px 30px;
+  border-radius: 30px 0px 0px 30px;
+  font-size: 18px;
+  font-family: "Outfit";
+}
+
+#search-box:focus {
+  outline: none;
+}
+
+#search-button {
+  border-radius: 20px;
+  background-color: rgb(60, 105, 0);
+  padding: 20px 0 20.5px 0;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0px 30px 30px 0px;
+  width: 20vw;
+}
+
+#filter label {
+  padding-right: 10px;
+}
+
+#filter {
+  background-color: rgb(38, 38, 38);
+  float: right;
+  padding: 16px 37px 16px 0px;
+  width: 40vw;
+}
+
+label {
+  font-size: 18px;
+  padding-left: 3vw;
+  color: rgb(255, 255, 255);
+}
+
+#search-button:hover {
+  background-color: rgb(59, 104, 0);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+input[type="checkmark"] {
+  margin-left: 20px;
+}
+
+/* @media only screen and (max-width: 1000px) {
+  #search-bar {
+    width: 400px;
+    height: 200px;
+  }
+  #search-module {
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+    border: none;
+    color: black;
+    padding: 0px;
+    border-radius: 30px 30px 30px 30px;
+  }
+  #filter {
+    background-color: rgb(38, 38, 38);
+    display: block;
+    padding: 0px;
+  }
+  #search-button {
+    border-radius: 20px;
+    background-color: rgb(60, 105, 0);
+    padding: 20px 80px 20.5px 60px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0px 30px 30px 0px;
+    min-width: 200px;
+    display: block;
+  }
+} */
+
+@media only screen and (max-width: 1185px) {
+  #search-button {
+    width: 15vw;
+  }
+}
+
+@media only screen and (max-width: 1072px) {
+  #search-box {
+    width: 25vw;
+  }
+  #filter {
+    width: 45vw;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  #search-box {
+    width: 20vw;
+  }
+  #filter {
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 835px) {
+  #search-bar {
+    width: 540px;
+    border-radius: 60px;
+  }
+  #search-box {
+    width: 180px;
+    padding: 47px 20px 47px 30px;
+    border-radius: 60px 0px 0px 60px;
+  }
+  #filter {
+    display: block;
+    width: 160px;
+    padding-right: 20px;
+    padding-bottom: 19px;
+    text-align: right;
+  }
+  #search-button {
+    padding: 47px 20px 50px 10px;
+    width: 130px;
+    border-radius: 0px 60px 60px 0px;
+  }
+}

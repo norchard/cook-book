@@ -1,0 +1,34 @@
+#header {
+  text-align: left;
+  padding: 20px 0 0 0;
+  margin: 40px 40px 0 40px;
+  text-align: center;
+}
+
+#header h1 {
+  display: inline;
+  margin: 0;
+  color: rgb(85, 112, 2);
+}
+
+#account {
+  float: right;
+}
+
+#account input {
+  margin-left: 20px;
+  vertical-align: baseline;
+  background-color: gray;
+  border: none;
+  padding: 5px 15px 6px 15px;
+  border-radius: 20px;
+}
+
+#account input:hover {
+  background-color: #5f5f5f;
+  cursor: pointer;
+}
+
+.clear {
+  clear: both;
+}

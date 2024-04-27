@@ -4,7 +4,8 @@ import "./Recipe.css";
 export default class Recipe extends Component {
   render() {
     const {
-      uri,
+      dishType,
+      source,
       url,
       label: name,
       images: {
@@ -13,15 +14,16 @@ export default class Recipe extends Component {
       cuisineType: cuisine,
     } = this.props.recipe;
 
-    console.log(this.props.recipe);
-
     return (
       <div className="card">
         <img className="image" src={image} />
         <div className="content">
           <div>
             <h3 className="title">{name}</h3>
-            <p>{cuisine}</p>
+            <h4 className="source">{source}</h4>
+            <p className="details">
+              {cuisine} / {dishType[0]}
+            </p>
           </div>
           <a href={url} className="recipe-button">
             See the recipe

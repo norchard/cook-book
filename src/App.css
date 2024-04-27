@@ -79,3 +79,18 @@ body {
 #chef {
   margin: 0 auto;
 }
+
+#next-btn,
+#previous-btn {
+  background-color: rgb(205, 127, 127);
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+  margin: 20px;
+  font-weight: 600;
+}
+
+#next-btn:hover,
+#previous-btn:hover {
+  background-color: rgb(160, 86, 86);
+}

@@ -15,6 +15,10 @@ function App() {
   const [vegan, setVegan] = useState(false);
   const [vegetarian, setVegetarian] = useState(false);
   const [next, setNext] = useState("");
+  const [previous] = useState([]);
+  // const [previous, setPrevious] = useState("");
+  // const [current, setCurrent] = useState("");
+
   const APP_ID = "ae3ec5e8";
   const APP_KEY = "42f3cab4027b54de258815e9b6e1c81c";
 
@@ -26,10 +30,8 @@ function App() {
   };
 
   async function handleClick(e, url = "") {
-    console.log("hi");
-    console.log(url);
+    console.log(e.target.id);
     if (!url) {
-      console.log("hihi");
       const search = searchInput ? `&q=${searchInput}` : "";
       const glutenFreeSearch = glutenFree ? "&health=gluten-free" : "";
       const veganSearch = vegan ? "&health=vegan" : "";
@@ -37,13 +39,14 @@ function App() {
       const query = search + glutenFreeSearch + veganSearch + vegetarianSearch;
       url = `https://api.edamam.com/api/recipes/v2?type=public${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
     }
-    console.log("hihihi");
-    console.log(url);
     const response = await fetch(url);
     const json = await response.json();
     console.log(json);
+    if (e.target.id !== "prev-btn") previous.push(url);
     if (json._links.next) setNext(json._links.next.href);
+    else setNext("");
     setRecipeList(json.hits);
+    console.log(previous);
   }
 
   return (
@@ -74,8 +77,17 @@ function App() {
           />
         ))}
       </div>
+      {previous.length > 1 && (
+        <input
+          id="previous-btn"
+          type="button"
+          onClick={(e) => handleClick(e, previous.pop())}
+          value="Previous page"
+        />
+      )}
       {next && (
         <input
+          id="next-btn"
           type="button"
           onClick={(e) => handleClick(e, next)}
           value="Next page"

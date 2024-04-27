@@ -1,5 +1,5 @@
 h2 {
-  float: left;
+  /* float: left; */
   display: inline;
   margin: 0;
   line-height: 30px;
@@ -7,10 +7,10 @@ h2 {
   vertical-align: baseline;
 }
 
-h3 {
+/* h3 {
   float: left;
   line-height: 33px;
-}
+} */
 
 #search-bar {
   margin: 40px auto;
